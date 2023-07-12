@@ -21,5 +21,5 @@ public class Todo {
     public String title;
 
     @Column(name = "DESCRIPTION")
-    public String Description;
+    public String description;
 }

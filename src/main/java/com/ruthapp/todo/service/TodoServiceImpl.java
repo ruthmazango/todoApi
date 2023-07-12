@@ -28,14 +28,13 @@ public class TodoServiceImpl implements TodoService{
         return (List<Todo>) todoRepository.findAll();
     }
 
+    //read by id operation
     @Override
     public Optional<Todo> findById(Long id) {
-        Optional<Todo> todo = todoRepository.findById(id);
-        if(id == null){
-            System.out.print("Todo does not exist");
-        }  return todo;
+        return todoRepository.findById(id);
     }
 
+    //update operation
     @Override
     public Todo updateTodo(Todo todo, Long id) {
         Todo todo1=todoRepository.findById(id).get();
@@ -47,6 +46,7 @@ public class TodoServiceImpl implements TodoService{
         } return todoRepository.save(todo1);
     }
 
+    //delete operation
     @Override
     public void deleteTodo(Long id) {
         todoRepository.deleteById(id);
