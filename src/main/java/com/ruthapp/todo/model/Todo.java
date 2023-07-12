@@ -1,4 +1,4 @@
-package com.ruthapp.todo;
+package com.ruthapp.todo.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
