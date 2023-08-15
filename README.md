@@ -21,7 +21,7 @@ The api has five RESTful endpoints:
 
    curl --location 'http://localhost:8080/api/v1/todo/1'
 
-4. Update todo
+4. Update todo (Using HTTP PUT, need to update to PATCH)
 
    curl --location --request PUT 'http://localhost:8080/api/v1/todo/17' \
 --header 'Content-Type: application/json' \
