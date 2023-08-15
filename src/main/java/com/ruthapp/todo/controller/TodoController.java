@@ -1,6 +1,7 @@
 package com.ruthapp.todo.controller;
 
 import com.ruthapp.todo.model.Todo;
+import com.ruthapp.todo.model.TodoPatch;
 import com.ruthapp.todo.service.TodoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -54,4 +55,12 @@ public class TodoController {
         todoService.deleteTodo(id);
         return "Deleted successfully";
     }
+
+//    @PatchMapping("/{id}")
+//    public ResponseEntity<?> partialUpdateTodo(
+//            @RequestBody TodoPatch partialUpdate, @PathVariable("id") Long id) {
+//
+//        todoService.updateTodoPatch(partialUpdate, id);
+//        return ResponseEntity.ok("resource address updated");
+//    }
 }

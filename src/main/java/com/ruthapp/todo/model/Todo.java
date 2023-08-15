@@ -3,6 +3,7 @@ package com.ruthapp.todo.model;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "TODO")
@@ -17,8 +18,10 @@ public class Todo {
     public Long id;
 
     @Column(name = "TITLE")
+    @NotNull
     public String title;
 
     @Column(name = "DESCRIPTION")
+    @NotNull
     public String description;
 }

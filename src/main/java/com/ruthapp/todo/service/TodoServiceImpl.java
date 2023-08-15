@@ -1,6 +1,7 @@
 package com.ruthapp.todo.service;
 
 import com.ruthapp.todo.model.Todo;
+import com.ruthapp.todo.model.TodoPatch;
 import com.ruthapp.todo.repository.TodoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -45,6 +46,24 @@ public class TodoServiceImpl implements TodoService{
             todo1.setDescription(todo.getDescription());
         } return todoRepository.save(todo1);
     }
+
+//    @Override
+//    public Todo updateTodoPatch(TodoPatch todoPatch, Long id) {
+//        Todo todo = todoRepository.findById(id).orElse(null);
+//        if (todo == null) {
+//            System.out.print("Todo does not exist"); // Handle the case when the todo is not found
+//        } else {
+//            applyPatchToTodo(todoPatch, todo);
+//        }return todoRepository.save(todo);
+//    }
+//
+//    private void applyPatchToTodo(TodoPatch todoPatch, Todo todo) {
+//
+//        if (TodoPatch.getDescription() != null) {
+//            todo.setDescription(todoPatch.getDescription());
+//        }
+//    }
+
 
     //delete operation
     @Override
